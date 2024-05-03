@@ -7,11 +7,11 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Désactivation de l'interface réseau cloud-init
-echo "Désactivation de l'interface réseau cloud-init..."
-cat << EOF > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
-network:
-  config: disabled
-EOF
+#echo "Désactivation de l'interface réseau cloud-init..."
+#cat << EOF > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+#network:
+#  config: disabled
+#EOF
 
 # Purge du paquet cloud-init
 echo "Purge du paquet cloud-init..."
