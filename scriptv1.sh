@@ -31,7 +31,7 @@ apt autoremove -y
 rm -r /home/autovms/
 
 # Clear history
-history -c
+cat /dev/null > ~/.bash_history 
 
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
