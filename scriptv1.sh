@@ -1,12 +1,20 @@
 #!/bin/bash
 
 # Vérification des privilèges root
-if [ "$EUID" -ne 0 ]
-  then echo "Ce script doit être exécuté en tant que root"
-  exit
+if [ "$EUID" -ne 0 ]; then
+  echo "Ce script doit être exécuté en tant que root"
+  exit 1
 fi
 
+# Désactivation de l'interface réseau cloud-init
+echo "Désactivation de l'interface réseau cloud-init..."
+cat << EOF > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+network:
+  config: disabled
+EOF
+
 # Mise à jour des paquets
+echo "Mise à jour des paquets..."
 apt update
 
 # Notification de la fin de l'opération
