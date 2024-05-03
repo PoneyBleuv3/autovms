@@ -30,8 +30,8 @@ apt autoremove -y
 # Remove script
 rm -r /home/autovms/
 
-# Clear history
-rm ~/.bash_history; history -c; logout
-
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
+
+# Clear history
+rm ~/.bash_history; history -c; logout
