@@ -31,7 +31,6 @@ apt autoremove -y
 rm -r /home/autovms/
 
 # Clear history
-cat /dev/null > ~/.bash_history 
 history -c && history -w
 
 # Notification de la fin de l'opération
