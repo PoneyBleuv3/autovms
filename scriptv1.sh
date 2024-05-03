@@ -30,6 +30,9 @@ apt autoremove -y
 # Remove script
 rm -r /home/autovms/
 
+# Debug
+mkdir /home/debug
+
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
 
