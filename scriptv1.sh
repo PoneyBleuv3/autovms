@@ -17,9 +17,15 @@ EOF
 echo "Purge du paquet cloud-init..."
 apt purge -y cloud-init
 
+# Force remove cloud-init
+rm -r /etc/cloud/*
+
 # Mise à jour des paquets
 echo "Mise à jour des paquets..."
 apt update && apt dist-upgrade -y
+
+# Clear des paquets
+apt autoremove -y
 
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
