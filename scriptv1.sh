@@ -34,4 +34,4 @@ rm -r /home/autovms/
 echo "La mise à jour des paquets est terminée."
 
 # Clear history
-rm ~/.bash_history; history -c; logout
+history -c
