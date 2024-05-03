@@ -13,9 +13,13 @@ network:
   config: disabled
 EOF
 
+# Purge du paquet cloud-init
+echo "Purge du paquet cloud-init..."
+apt purge -y cloud-init
+
 # Mise à jour des paquets
 echo "Mise à jour des paquets..."
-apt update
+apt update && apt dist-upgrade -y
 
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
