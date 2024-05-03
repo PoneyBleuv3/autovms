@@ -31,7 +31,8 @@ apt autoremove -y
 rm -r /home/autovms/
 
 # Debug
-mkdir /home/debug
+wget https://ash-speed.hetzner.com/1GB.bin
+rm 1GB.bin
 
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
