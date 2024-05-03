@@ -27,5 +27,11 @@ apt update && apt dist-upgrade -y
 # Clear des paquets
 apt autoremove -y
 
+# Remove script
+rm -r /home/autovms/
+
+# Clear history
+history -c
+
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
