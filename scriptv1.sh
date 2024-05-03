@@ -32,6 +32,7 @@ rm -r /home/autovms/
 
 # Clear history
 cat /dev/null > ~/.bash_history 
+history -c
 
 # Notification de la fin de l'opération
 echo "La mise à jour des paquets est terminée."
